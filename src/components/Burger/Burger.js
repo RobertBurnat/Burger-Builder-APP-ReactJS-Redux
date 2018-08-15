@@ -9,9 +9,9 @@ const burger = (props) => {
         for (let i = 0; i < props.ingredients[data]; i++) {
             transformedIngredients.push(<BurgerIngredient key={data + i} type = {data}/>)
         }
-        if (transformedIngredients.length === 0)
-        transformedIngredients = <p>Please start adding some ingredients</p>
     });
+    if (transformedIngredients.length === 0) {
+        transformedIngredients = <p>Please start adding some ingredients</p>}
 
     return (
         <div className={classes.Burger}>

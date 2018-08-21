@@ -12,9 +12,9 @@ const ingControls = [
 const buildControls = props => (
     <div className={classes.BuildControls}>
         <p>Current Price: <strong>{props.price}</strong></p>
-        {ingControls.map(ctrl => {
+        {ingControls.map((ctrl,index) => {
             return <BuildControl 
-            key={ctrl.label} 
+            key={index} 
             label={ctrl.label}
             added={() => props.ingredientAdded(ctrl.type)}
             removed={() => props.ingredientRemoved(ctrl.type)}
